@@ -1,0 +1,25 @@
+{
+  "name": "demo-basic-ui",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start:dev": "npx parcel index.html",
+    "start:static": "http-server ./build/output --silent",
+    "test": "npm explore demo-shared-ui-tests -- npm start",
+    "build": "parcel build index.html --out-dir build/output --public-url ./ --log-level 2",
+    "clean": "rm -rf dist build"
+  },
+  "author": "Vladislav Sinelnikov",
+  "license": "ISC",
+  "dependencies": {
+    "demo-shared-ui-tests": "git+https://github.com/gusberry/demo-shared-ui-tests.git",
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-runtime": "^6.26.0",
+    "parcel-bundler": "^1.7.1"
+  }
+}
