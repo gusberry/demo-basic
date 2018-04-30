@@ -5,14 +5,17 @@
   "scripts": {
     "start:dev": "npx parcel index.html",
     "start:static": "http-server ./build/output --silent",
-    "test": "npm explore demo-shared-ui-tests -- npm start",
-    "build": "parcel build index.html --out-dir build/output --public-url ./ --log-level 2",
+    "test":
+      "npm explore demo-shared-ui-tests -- npm start -- --env STATIC_SERVER_URL=$BASE_URL",
+    "build":
+      "parcel build index.html --out-dir build/output --public-url ./ --log-level 2",
     "clean": "rm -rf dist build"
   },
   "author": "Vladislav Sinelnikov",
   "license": "ISC",
   "dependencies": {
-    "demo-shared-ui-tests": "git+https://github.com/gusberry/demo-shared-ui-tests.git",
+    "demo-shared-ui-tests":
+      "git+https://github.com/gusberry/demo-shared-ui-tests.git",
     "http-server": "^0.11.1"
   },
   "devDependencies": {
